@@ -1,4 +1,4 @@
-let time = 3;
+let time = 2;
 let randomTop =0
 let randomWidth =0
 let countdown = document.getElementById("countdown")
@@ -10,7 +10,7 @@ let intervalId;
 
 target.addEventListener("click", function(){
     getRandom()
-    time = 3
+    time = 2
     points += 1
     pointsEl.textContent = points
     target.style.marginTop = randomTop 
@@ -23,13 +23,13 @@ target.addEventListener("click", function(){
 
     if (points > 19 && points < 40){
         background.style.backgroundColor = "lightblue"
-        target.style.height = 30 +"px";
-        target.style.width = 30 +"px";
+        target.style.height = 25 +"px";
+        target.style.width = 25 +"px";
 
     } else if (points > 39 && points < 50){
         background.style.backgroundColor = "lightcoral"
-        target.style.height = 25 +"px";
-        target.style.width = 25 +"px";
+        target.style.height = 20 +"px";
+        target.style.width = 20 +"px";
         target.style.backgroundColor = "green";
     } else if (points >49)  {
         target.style.display = "none";
