@@ -43,8 +43,8 @@ target.addEventListener("click", function(){
 
 
 function getRandom (){
-    randomTop = Math.floor(Math.random()*301) +"px"
-    randomWidth = Math.floor(Math.random()*301) +"px"
+    randomTop = Math.floor(Math.random()*501) +"px"
+    randomWidth = Math.floor(Math.random()*501) +"px"
 }
 
 
