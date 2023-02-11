@@ -5,7 +5,7 @@ let countdown = document.getElementById("countdown")
 let background = document.getElementById("target-range")
 let target= document.getElementById("target")
 let pointsEl =document.getElementById("points")
-let points = 48
+let points = 0
 let intervalId;
 
 target.addEventListener("click", function(){
