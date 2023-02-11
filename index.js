@@ -5,7 +5,7 @@ let countdown = document.getElementById("countdown")
 let background = document.getElementById("target-range")
 let target= document.getElementById("target")
 let pointsEl =document.getElementById("points")
-let points = 0
+let points = 48
 let intervalId;
 
 target.addEventListener("click", function(){
@@ -52,7 +52,7 @@ function getRandom (){
 function countdownTimer() {
     intervalId = setInterval(function() {
       time = time - 1;
-      if (time <= 0) {
+      if (time <= 0 && points <50) {
         target.style.display = "none";
         background.style.backgroundColor = "gray";
         background.style.backgroundImage = "url(fail.gif)"
