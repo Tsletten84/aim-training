@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(167, 160, 160);
+    text-shadow: 1px 1px white;
+}
+
+#target {
+    background-color: red;
+    height: 40px;
+    width: 40px;
+    border: 5px solid black;
+    margin-top: 500px;
+    margin-left:500px;
+    border-radius: 50%;
+}
+
+#target-range{
+    background-position: center;
+
+    margin:auto;
+    background-color: green;
+    height: 550px;
+    width: 550px;
+    border: 5px solid black
+}
+
+#points {
+    text-align: center;
+    color:black;
+    font-size: 40px;
+    font-weight: bold;
+}
+
