@@ -1,6 +1,8 @@
 body{
     background-color: rgb(167, 160, 160);
     text-shadow: 1px 1px white;
+    text-align: center;
+    
 }
 
 #target {
