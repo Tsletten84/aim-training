@@ -1,10 +1,12 @@
 let time = 2;
 let randomTop =0
 let randomWidth =0
-let countdown = document.getElementById("countdown")
-let background = document.getElementById("target-range")
-let target= document.getElementById("target")
-let pointsEl =document.getElementById("points")
+const countdown = document.getElementById("countdown")
+const background = document.getElementById("target-range")
+const audio = new Audio("shot.mp3");
+const audioWin = new Audio("win.mp3");
+const target= document.getElementById("target")
+const pointsEl =document.getElementById("points")
 let points = 0
 let intervalId;
 
@@ -18,26 +20,27 @@ target.addEventListener("click", function(){
     countdown.textContent = time
     clearInterval(intervalId);
     countdownTimer()
+    audio.currentTime = 0; audio.play();
+    
 
-      
-
-    if (points > 19 && points < 40){
+    if (points > 9 && points < 20){
         background.style.backgroundColor = "lightblue"
         target.style.height = 25 +"px";
         target.style.width = 25 +"px";
 
-    } else if (points > 39 && points < 50){
+    } else if (points > 19 && points < 30){
         background.style.backgroundColor = "lightcoral"
         target.style.height = 20 +"px";
         target.style.width = 20 +"px";
         target.style.backgroundColor = "green";
-    } else if (points >49)  {
+    } else if (points >29)  {
         target.style.display = "none";
         background.style.backgroundColor = "gray";
         background.style.backgroundImage = "url(win.gif)"
         background.style.backgroundRepeat = "no-repeat";
         background.style.backgroundSize = "500px";
-
+        audioWin.play();
+        time= 500
     }
 })
 
@@ -46,7 +49,6 @@ function getRandom (){
     randomTop = Math.floor(Math.random()*501) +"px"
     randomWidth = Math.floor(Math.random()*501) +"px"
 }
-
 
 
 function countdownTimer() {
