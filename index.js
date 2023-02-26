@@ -1,4 +1,4 @@
-let time = 2;
+let time = 1;
 let randomTop =0
 let randomWidth =0
 const countdown = document.getElementById("countdown")
@@ -28,13 +28,13 @@ target.addEventListener("click", function(){
     }
     if (points > 9 && points < 20){
         background.style.backgroundColor = "lightblue"
-        target.style.height = 20 +"px";
-        target.style.width = 20 +"px";
+        target.style.height = 25 +"px";
+        target.style.width = 25 +"px";
 
     } else if (points > 19 && points < 30){
         background.style.backgroundColor = "lightcoral"
-        target.style.height = 10 +"px";
-        target.style.width = 10 +"px";
+        target.style.height = 15 +"px";
+        target.style.width = 15 +"px";
         target.style.backgroundColor = "green";
 
     } else if (points >29)  {
