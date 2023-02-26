@@ -28,14 +28,15 @@ target.addEventListener("click", function(){
     }
     if (points > 9 && points < 20){
         background.style.backgroundColor = "lightblue"
-        target.style.height = 25 +"px";
-        target.style.width = 25 +"px";
+        target.style.height = 20 +"px";
+        target.style.width = 20 +"px";
 
     } else if (points > 19 && points < 30){
         background.style.backgroundColor = "lightcoral"
-        target.style.height = 20 +"px";
-        target.style.width = 20 +"px";
+        target.style.height = 10 +"px";
+        target.style.width = 10 +"px";
         target.style.backgroundColor = "green";
+
     } else if (points >29)  {
         target.style.display = "none";
         background.style.backgroundColor = "gray";
