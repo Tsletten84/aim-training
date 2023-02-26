@@ -15,7 +15,7 @@ target.addEventListener("click", function(){
     getRandom()
     time = 2
     points += 1
-    pointsEl.textContent = points
+    pointsEl.textContent =("Poeng" + points)
     target.style.marginTop = randomTop 
     target.style.marginLeft = randomWidth 
     // countdown.textContent = time
