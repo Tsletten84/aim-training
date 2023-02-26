@@ -9,20 +9,23 @@ const target= document.getElementById("target")
 const pointsEl =document.getElementById("points")
 let points = 0
 let intervalId;
+// target.style.display= "none";
 
-target.addEventListener("click", function(){
+target.addEventListener("click", function(){ 
     getRandom()
     time = 2
     points += 1
     pointsEl.textContent = points
     target.style.marginTop = randomTop 
     target.style.marginLeft = randomWidth 
-    countdown.textContent = time
+    // countdown.textContent = time
     clearInterval(intervalId);
     countdownTimer()
     audio.currentTime = 0; audio.play();
     
-
+    if (points <9 && points >0 ) {
+        countdown.textContent = time
+    }
     if (points > 9 && points < 20){
         background.style.backgroundColor = "lightblue"
         target.style.height = 25 +"px";
@@ -40,7 +43,8 @@ target.addEventListener("click", function(){
         background.style.backgroundRepeat = "no-repeat";
         background.style.backgroundSize = "500px";
         audioWin.play();
-        time= 500
+        time= 5000
+        countdown.style.display= "none";
     }
 })
 
@@ -60,7 +64,7 @@ function countdownTimer() {
         background.style.backgroundImage = "url(fail.gif)"
         background.style.backgroundRepeat = "no-repeat";
         background.style.backgroundSize = "500px";
-        countdown.textContent = "ALL ABOARD THE FAIL TRAIN!"
+        countdown.textContent = "For treigt! Trykk F5 og prøv igjen :D"
         clearInterval(intervalId);
         return;
       }
